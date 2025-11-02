@@ -1,0 +1,68 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun.lockb
+
+# Next.js build output
+.next/
+out/
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+logs/*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Local JSON server / mock data
+data.json
+*.db.json
+
+# Runtime files
+.next/
+.vercel/
+
+# Optional: Ignore output files generated during development
+*.local
+*.cache
+.cache/
+
+# Ignore uploads or generated static files (if any)
+public/uploads/
+public/generated/
