@@ -1,0 +1,90 @@
+/* 1️⃣ Import Tailwind first */
+@import "tailwindcss";
+
+/* 2️⃣ CSS variables (light theme) */
+:root {
+  --background: #1797d2;      /* page background */
+  --foreground: #f1f2ec;      /* text on dark */
+  --primary: #1797d2;         /* main blue */
+  --success: #a1d7e7;         /* light blue */
+  --danger: #f04c4c;          /* red */
+  --navbar-bg: #a1d7e7;       /* navbar and card bg */
+  --card-bg: #ffffff;         /* light card background */
+  --text-color: #153f65;
+     /* main readable text */
+}
+
+/* 3️⃣ Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --card-bg: #171717;
+    --navbar-bg: #1a1a1a;
+    --text-color: #f1f2ec;
+  }
+}
+
+/* 4️⃣ Body styles */
+body {
+  background: var(--background);
+  color: var(--text-color);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.015em;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 5️⃣ Generic styling helpers */
+.card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--foreground);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+/* 6️⃣ Homepage animated gradient background */
+.animated-bg {
+  background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
+  background-size: 300% 300%;
+  animation: Background 25s ease infinite;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@keyframes Background {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional: heading style on homepage */
+.animated-bg h1 {
+  text-shadow: 1px 2px 1px rgba(0,0,0,0.6);
+}
