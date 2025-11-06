@@ -13,8 +13,6 @@ The API receives a JSON payload containing articles and shopping carts, then cal
 
 ## 📁 Project Structure
 
-store/
-
 ├─ app/
 
 │ └─ api/
@@ -121,7 +119,7 @@ The endpoint expects a JSON payload like:
 
 You can test the endpoint locally using PowerShell’s built-in HTTP tools.
 
-From the project root (store/), run:
+From the project root (./), run:
 
 ```powershell
 Invoke-RestMethod -Uri "http://localhost:3000/api/checkout" `
@@ -150,7 +148,7 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/checkout" `
 
 You can send a POST request to the checkout API using `curl` directly from the terminal.
 
-From the project root (`store/`), run:
+From the project root (./), run:
 
 ```bash
 curl -X POST http://localhost:3000/api/checkout \
