@@ -14,22 +14,31 @@ The API receives a JSON payload containing articles and shopping carts, then cal
 ## 📁 Project Structure
 
 store/
+
 ├─ app/
+
 │ └─ api/
+
 │ └─ checkout/
+
 │ └─ route.ts # API endpoint logic
+
 ├─ services/
+
 │ └─ cartService.ts # Core calculation logic
+
 ├─ types/
+
 │ └─ index.d.ts # TypeScript definitions
-├─ backend_tasks/
-│ └─ level1/
-│ ├─ data.json # Input test data
-│ └─ output.json # Expected output file (generated after test)
+
 ├─ tests/
+
 │ └─ cartService.test.ts # Unit tests for service layer
+
 ├─ jest.config.mjs # Jest config (ESM)
+
 ├─ package.json
+
 └─ tsconfig.json
 
 ---
