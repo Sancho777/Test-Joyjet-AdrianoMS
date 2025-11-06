@@ -34,7 +34,7 @@ store/
 
 ```bash
 git clone git@bitbucket.org:<you>/joyjet-quiz.git
-cd backend/store
+cd backend
 ```
 
 ### 1️⃣ Install Dependencies

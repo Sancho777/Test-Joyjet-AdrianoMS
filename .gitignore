@@ -51,7 +51,6 @@ temp/
 *.bak
 
 # Local JSON server / mock data
-data.json
 *.db.json
 
 # Runtime files
