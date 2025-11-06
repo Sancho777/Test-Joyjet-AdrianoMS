@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import type { Article, CartItem, Discount, InputData, CartTotal } from "@/types";
 
+export async function GET() {
+  return NextResponse.json({ message: "Send POST requests to /api/checkout" });
+}
+
 export async function POST(req: Request) {
   const { articles, carts, discounts }: InputData & { discounts?: Discount[] } = await req.json();
 
@@ -9,7 +13,7 @@ export async function POST(req: Request) {
   }
 
   const articleMap = new Map<number, Article>(articles.map(a => [a.id, a]));
-  const discountMap = new Map<number, Discount>((discounts || []).map(d => [d.article_id, d]));
+  const discountMap = new Map<number, Discount>((discounts ?? []).map(d => [d.article_id, d]));
 
   const responseCarts: CartTotal[] = carts.map(cart => {
     let total = 0;
@@ -19,8 +23,8 @@ export async function POST(req: Request) {
       if (!article) return;
 
       let finalPrice = article.price;
-
       const discount = discountMap.get(article.id);
+
       if (discount) {
         if (discount.type === "amount") {
           finalPrice = Math.max(0, article.price - discount.value);
@@ -32,8 +36,6 @@ export async function POST(req: Request) {
       total += finalPrice * item.quantity;
     });
 
-    // Determine delivery fee based on total
-    // You could pass delivery fees in payload or hardcode logic here
     let delivery = 0;
     if (total <= 1000) delivery = 800;
     else if (total <= 2000) delivery = 400;
