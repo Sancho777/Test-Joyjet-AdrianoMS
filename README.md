@@ -8,7 +8,9 @@ This repository contains two separate tasks — one for **Backend** and one for 
 
 .
 ├── backend/ # Backend API challenge (Level 1–3)
+
 ├── frontend/ # Frontend quiz application challenge
+
 └── README.md # This file
 
 ---
@@ -104,16 +106,3 @@ Each folder contains:
 
 - Source code for the respective challenge.
 - A dedicated `README.md` file with setup, execution, and test instructions.
-
-This root-level README provides an overview of the entire project and how both tasks are structured.
-
----
-
-## 💌 Submission
-
-Once both tasks are completed:
-
-1. Push your code to your **BitBucket** repository.
-2. Send the repository link via email to **[jobs@joyjet.com](mailto:jobs@joyjet.com)**.
-
----
