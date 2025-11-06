@@ -18,6 +18,10 @@ This repository contains two separate tasks — one for **Backend** and one for 
 
 <https://test-joyjet-adriano-ms-po33-7b23aovxn-rons-projects-2361ff29.vercel.app/>
 
+## Backend Project available at
+
+<https://test-joyjet-adriano-ms-ehf4.vercel.app/cart>
+
 ---
 
 ## 🧠 Overview
